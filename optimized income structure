@@ -45,6 +45,6 @@ while salary<=int(income):
     salary=salary+1
 
 min_totaltax=the_smallest_so_far
-print("optimized totaltax:",min_totaltax)
+print("optimized totaltax:", min_totaltax)
 print("optimized salary amount:", salary_when_min_totaltax)
 print("optimized bonus amount:", bonus_when_min_totaltax)
