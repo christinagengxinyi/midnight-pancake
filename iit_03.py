@@ -1,12 +1,11 @@
-#optimized salary/bonus division
-#income(determined)=salary+bonus, try to figure out a division with the lowest total tax
-
+#If the total annual income is determined, this calculation will figure out an optimized salary-bonus-structure with lowest tax
+#income(determined)=salary+bonus
 
 income=input("Enter your total annual income:")
 salary=1 #start from salary=1
 the_smallest_so_far=int(income)
 while salary<=int(income):
-    if salary<=36000:       #按照累进制计算工资个人所得税
+    if salary<=36000:       #tax for annual salary
         taxsalary=salary*0.03
     elif 36000<salary<=144000:
         taxsalary=salary*0.1-2520
@@ -21,8 +20,8 @@ while salary<=int(income):
     elif salary>960000:
         taxsalary=salary*0.45-181920
 
-    bonus=int(income)-salary   #年终奖=总收入-工资收入
-    if bonus<=36000:        #按照累进制计算年终奖个人所得税
+    bonus=int(income)-salary   
+    if bonus<=36000:        #tax for annual bonus
     	taxbonus=bonus*0.03
     elif 36000<bonus<=144000:
         taxbonus=bonus*0.1-2520/12
@@ -37,7 +36,7 @@ while salary<=int(income):
     elif bonus>960000:
     	taxbonus=bonus*0.45-181920/12
 
-    totaltax=taxsalary+taxbonus #合计工资个税+年终奖个税
+    totaltax=taxsalary+taxbonus 
     if totaltax<the_smallest_so_far:
     	the_smallest_so_far=totaltax
     	salary_when_min_totaltax=salary
