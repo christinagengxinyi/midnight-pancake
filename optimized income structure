@@ -1,4 +1,4 @@
-#optimized salary/bonus division
+#If the total annual income for an employee is determined, the tax liability could be different with different salary-bonus-division.
 #income(determined)=salary+bonus, try to figure out a division with the lowest total tax
 
 income=input("Enter your total annual income:")
